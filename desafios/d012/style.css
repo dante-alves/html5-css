@@ -25,36 +25,35 @@
     --font1: Verdana, Geneva, Tahoma, sans-serif;
     --font2: "Sriracha", cursive; /*Essa variável não está funcionando */
 }
-/*Configuração do body */
+/*Configuração de links */
 
 
 a {
-    color: white;
+    color: var(--cor1);
     text-decoration: none;
 }
 
 a:hover {
-    color: white;
+    color: var(--cor1);
     text-decoration: underline;
 }
 
-p {
-    margin: 10px;
-}
+
 /* Configuração do header */
 header {
     text-align: center;
-    background-color: black;
+    background-color: var(--cor0);
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.659);
 }
 
 header > h1 {
-    padding-top: 50px;
+    padding-top: 28px;
     font: normal normal 9dvw var(--font0);
-    color: white;
+    color: var(--cor1);
 }
 
 header > p {
-    color: white;
+    color: var(--cor1);
     font-family: var(--font1);
     padding-bottom: 55px;
 }
@@ -62,22 +61,43 @@ header > p {
 /*Configuração das sections */
 
 section {
-    border: 2px solid black;
-    padding: 10dvh 0px 10dvh 25px;
+    padding: 10dvh 0px 0dvh 25px;
 }
 
 section > p {
     line-height: 2em;
     font-family: "Sriracha", cursive;
     font-size: 3.5dvw;
+    margin-bottom: 20dvh;
+}
+/*Sections com imagems com efeito parallax*/
+.image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: right center;
+    box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.773);
 }
 
+.image > p {
+    background-color: rgba(0, 0, 0, 0.473);
+    padding: 20px;
+    color: white;
+    display: inline-block;
+}
+#image1 {
+    background-image: url("imagens/background001.jpg");
+}
+
+#image2 {
+    background-image: url("imagens/background002.jpg");
+}
 /*Configuração do footer */
 
 footer {
     text-align: center;
-    background-color: black;
-    color: white;
+    background-color: var(--cor0);
+    color: var(--cor1);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-bottom: -6px;
     padding: 3px;
