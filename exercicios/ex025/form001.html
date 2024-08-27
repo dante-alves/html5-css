@@ -46,6 +46,13 @@
             <label for="ihora">Horário da Prova</label>
             <input type="time" name="hora" id="ihora" >
 
+            <label for="iemail">Email</label>
+            <input type="email" name="email" id="iemail" placeholder="Ex: joaosilva@gmail.com" required autocomplete="email">
+
+            <label for="itel">Telefone</label>
+            <input type="tel" name="tel" id="tel" required autocomplete="tel" pattern="^\(\d{2}\)\d{4,5}-\d{4}$" placeholder="(xx)xxxxx-xxxx"> <!-- O pattern serve para definir o padrão de como o número deve ser colocado-->
+
+            <!--Estudar mais sobre RegEx-->
             <input type="submit" value="Enviar">
         </fieldset>
     </form>
