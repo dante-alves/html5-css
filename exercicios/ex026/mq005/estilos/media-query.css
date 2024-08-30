@@ -51,12 +51,6 @@
         display: none;
     }
 
-    #hamburguer:hover {
-        cursor: pointer;
-        background-color: white;
-        color: black;
-    }
-
     menu > ul > li {
         display: inline-block;
     }
@@ -64,7 +58,8 @@
 
 @media screen and (min-width:992px) {
     main {
-        width:50vw;
+        width:768px;
+        transition: width 0.5s;
     }
     menu > ul > li {
         display: inline-block;

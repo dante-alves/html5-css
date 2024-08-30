@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="estilos/style.css" media="all">
     <link rel="stylesheet" href="estilos/media-query.css">
 </head>
-<body onload="aparecer ()">
+<body onload="aparecer ()" onresize="redimensionar ()">
     <header>
         <h1>Meu site</h1>
-        <span id="hamburguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
+        <span id="hamburguer" class="material-symbols-outlined" onclick="clickMenu()" onmouseenter="entrar()" onmouseleave="sair()">menu</span>
         <menu id="menuu">
             <ul>
                 <li><a href="#">Opção 1</a></li>
@@ -35,6 +35,7 @@
     <script>
         var menu = document.querySelector('#menuu');
 
+        //Abrir ou fechar o menu hamburguer
         function clickMenu() {
            if (menu.style.display === 'none' || menu.style.display === '') {
             menu.style.display = 'block';
@@ -43,6 +44,7 @@
            }
         }
 
+        //Para resolver o bug de quando fecha o menu hamburguer e aumenta a tela (Solução que eu usei)
         window.addEventListener('resize', function() {
             if (window.innerWidth >= 768) {
                 menu.style.display = 'block'
@@ -50,7 +52,17 @@
                 menu.style.display = 'none'
             }
         });
+            /*Solução que Guanabara usou
+                function redimensionar () {
+                    if (window.innerWidth >= 768) {
+                        menu.style.display = 'block'
+                    } else {
+                        menu.style.display = 'none' 
+                    }
+                }
+            */
 
+        //Para fazer as opções do menu aparecerem se a tela for maior que 768px, e sumir se for menor, para só ter o menuzinho na tela quando iniciar a página
         function aparecer() {
             if (window.innerWidth >= 768) {
                 menu.style.display = 'block'
@@ -58,7 +70,16 @@
                 menu.style.display = 'none'
             }
         }
-      
+      //Para mudar a cor do menu quando passar o mouse em cima e não bugar em um celular 
+        function entrar () {
+            hamburguer.style.background = 'white';
+            hamburguer.style.color = 'black';
+        }
+     //Para voltar à cor normal 
+        function sair () {
+            hamburguer.style.background = 'rgb(53, 53, 53)';
+            hamburguer.style.color = 'white'
+        }
     </script>
 </body>
 </html>
