@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="estilos/style.css" media="all">
     <link rel="stylesheet" href="estilos/media-query.css">
 </head>
-<body>
+<body onload="aparecer ()">
     <header>
         <h1>Meu site</h1>
         <span id="hamburguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
@@ -43,7 +43,17 @@
            }
         }
 
-      
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 768) {
+                menu.style.display = 'block'
+            } else if (menu.style.display !== 'none') {
+                menu.style.display = 'none'
+            }
+        });
+
+        function aparecer() {
+            menu.style.display = 'block'
+        }
       
     </script>
 </body>
