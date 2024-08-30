@@ -43,6 +43,9 @@ header > h1 {
 
 #hamburguer:hover {
     cursor: pointer;
+}
+
+#hamburguer:active {
     background-color: white;
     color: black;
 }
@@ -69,6 +72,7 @@ menu a {
 menu a:hover {
     background-color: rgb(166, 166, 166);
 }
+
 /* Configuração do main */
 
 main {
@@ -79,6 +83,7 @@ main {
     border-radius: 10px;
     background-color: white;
     padding: 10px;
+
 }
 
 article > h2 {
