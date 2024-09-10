@@ -20,6 +20,16 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: var(--cor2);
+    
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+header.items {
+    flex: 1 1 150px;
+}
+.items {
+    flex: auto;
 }
 
 /* Configurações do link*/
@@ -43,6 +53,7 @@ header {
 header > h1 {
     width: 200px;
     text-align: center;
+    padding-left: 7px;
 
     font-size: 3em;
     text-shadow: 1px 1px 2px black;
@@ -83,5 +94,4 @@ main {
     
     width: 100vw;
     padding: 20px;
-    margin: 10px auto;
 }
