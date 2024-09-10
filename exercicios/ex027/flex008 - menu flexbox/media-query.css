@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+@media screen and (min-width:600px){
+    header {
+        flex-flow: column wrap;
+        align-items: flex-start;
+
+        height: 140px;
+        padding-top: 20px;
+    }
+
+    menu > ul {
+        flex-flow: row nowrap;
+        height: auto;
+        width: 620px;
+    }
+
+    menu a {
+        width: 90px;
+    }
+}
+
+@media screen and (min-width:992px) {
+    header {
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+        height: 110px;
+    }
+
+    menu > ul {
+        align-items: center;
+
+        height: 60px;
+    }
+}
