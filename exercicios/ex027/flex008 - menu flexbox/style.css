@@ -46,6 +46,7 @@ header {
     justify-content: space-evenly;
     align-items:center;
    
+    padding: 10px;
     height: 400px;
     background-color: var(--cor1);
 }
@@ -53,7 +54,6 @@ header {
 header > h1 {
     width: 200px;
     text-align: center;
-    padding-left: 7px;
 
     font-size: 3em;
     text-shadow: 1px 1px 2px black;

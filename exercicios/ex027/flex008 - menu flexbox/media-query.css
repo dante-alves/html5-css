@@ -21,6 +21,13 @@
     menu a {
         width: 90px;
     }
+
+    main {
+        width: 80vw;
+        margin: 10px auto;
+        border-radius: 10px;
+        box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.288);
+    }
 }
 
 @media screen and (min-width:992px) {
